@@ -2,4 +2,19 @@ body {
     max-width: 100%;
     margin: 0;
     padding: 0;
+    text-align: center;
+}
+
+.colours-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.colour {
+    width: 10em;
+    height: 10em;
+    background-color: black;
+    margin: 2em;
 }
