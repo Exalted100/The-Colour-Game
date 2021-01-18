@@ -4,13 +4,13 @@ const three = document.querySelector(".three");
 const four = document.querySelector(".four");
 
 const backgroundColours = [
-    `rgb(250, 250, 0)`,
-    "rgb(0, 250, 0)",
-    "rgb(0, 0, 250)",
-    "rgb(0, 250, 250)",
+    `rgb(${Math.floor(Math.random() * 250)}, ${Math.floor(Math.random() * 250)}, ${Math.floor(Math.random() * 250)})`,
+    `rgb(${Math.floor(Math.random() * 250)}, ${Math.floor(Math.random() * 250)}, ${Math.floor(Math.random() * 250)})`,
+    `rgb(${Math.floor(Math.random() * 250)}, ${Math.floor(Math.random() * 250)}, ${Math.floor(Math.random() * 250)})`,
+    `rgb(${Math.floor(Math.random() * 250)}, ${Math.floor(Math.random() * 250)}, ${Math.floor(Math.random() * 250)})`,
 ]
 
-const rightColour = backgroundColours[2]
+const rightColour = backgroundColours[Math.floor(Math.random() * 4)]
 
 document.querySelector(".colour-code").textContent = rightColour;
 
@@ -20,12 +20,11 @@ for (let i = 0; i < 4; i++) {
 
 const squareClick = (chosen) => {
     const chosenColour = chosen.style.backgroundColor;
-    chosen.style.backgroundColor = "red"
 
     if (chosenColour === rightColour) {
-        alert("You're right!");
+        document.querySelector(".guess-reply").textContent = "You're right!";
     } else {
-        alert("Oops, that isn't the right colour. Try again.")
+        document.querySelector(".guess-reply").textContent = "Oops, that isn't the right colour. Try again."
     }
 
     console.log(chosenColour + " " + rightColour)
