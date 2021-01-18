@@ -20,7 +20,8 @@ for (let i = 0; i < 4; i++) {
 
 const squareClick = (chosen) => {
     const chosenColour = chosen.style.backgroundColor;
-    
+    chosen.style.backgroundColor = "red"
+
     if (chosenColour === rightColour) {
         alert("You're right!");
     } else {
@@ -34,3 +35,5 @@ one.addEventListener("click", () => squareClick(one));
 two.addEventListener("click", () => squareClick(two));
 three.addEventListener("click", () => squareClick(three));
 four.addEventListener("click", () => squareClick(four));
+
+document.querySelector(".button").addEventListener("click", () => location.reload())
