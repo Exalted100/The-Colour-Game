@@ -19,8 +19,8 @@ for (let i = 0; i < 4; i++) {
 }
 
 const squareClick = (chosen) => {
-    const chosenColour = chosen.style.background;
-
+    const chosenColour = chosen.style.backgroundColor;
+    
     if (chosenColour === rightColour) {
         alert("You're right!");
     } else {
